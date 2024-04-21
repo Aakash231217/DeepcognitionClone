@@ -51,7 +51,7 @@ export default {
 
 .user-options {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   cursor: pointer;
   margin-left: auto; /* This will push the gear icon to the right */
 }

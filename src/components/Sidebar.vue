@@ -19,10 +19,10 @@ export default {
   data() {
     return {
       menuItems: [
+        { icon: '📊', text: 'Dashboard', path: '/dashboard' },
         { icon: '📥', text: 'Inbox', path: '/inbox' },
         { icon: '📁', text: 'File Preparation', path: '/file-preparation' },
         { icon: '📄', text: 'Documents', path: '/documents' },
-        { icon: '📊', text: 'Dashboard', path: '/dashboard' }, // Dashboard item added
         // Add other menu items here
       ],
     };

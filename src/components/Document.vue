@@ -100,29 +100,43 @@ export default {
   background-color: #0056b3; /* Darker shade on hover */
 }
 
-.search-and-tools input,
-.search-and-tools button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.9rem; /* Font size adjustment */
+.search-and-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between search input and buttons */
+  margin-bottom: 20px; /* Space below the search and tools section */
 }
 
 .search-and-tools input {
-  flex-grow: 1; /* Search input takes up available space */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  outline: none;
+  width: 100%;
+  max-width: 240px; /* Controls the width of the input */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.search-and-tools input:focus {
+  border-color: #3498db; /* Blue border for focus state */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5); /* Glowing effect */
 }
 
 .search-and-tools button {
-  background-color: #f8f9fa; /* Lighter background for buttons */
-  color: #333; /* Color for button text */
+  padding: 10px 15px;
+  background-color: #3498db; /* Blue background for buttons */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  color: white;
   cursor: pointer;
-  border-color: #ddd; /* Border color to distinguish buttons */
-  margin-left: 8px; /* Spacing between buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .search-and-tools button:hover {
-  background-color: #e2e6ea; /* Slightly darker on hover */
+  background-color: #2980b9; /* Darker blue on hover */
 }
+
 
 .documents-table {
   width: 100%;
@@ -175,6 +189,18 @@ export default {
   background-color: #3498db; /* Blue background for the active page */
   color: white; /* White text for the active page */
   border-color: #3498db; /* Same color for border to blend in */
+}
+
+@media (max-width: 768px) {
+  .search-and-tools {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-and-tools input,
+  .search-and-tools button {
+    width: 100%; /* Full width on smaller screens */
+  }
 }
 
 /* ... additional styles ... */

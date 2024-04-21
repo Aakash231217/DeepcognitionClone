@@ -1,6 +1,7 @@
 <template>
   <header class="top-bar">
-    <img src="" alt="Company Logo" class="logo" />
+    <img src="@/assets/DC_logo.png" alt="Company Logo" class="logo" />
+
     <div class="spacer"></div>
     <div class="user-options" @click="toggleDropdown">
       <!-- Icon for user/account options -->
